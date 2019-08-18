@@ -1,7 +1,7 @@
-package HibernateEnvers.trainning;
+package envers.trainning;
 
-import HibernateEnvers.trainning.dao.UserDao;
-import HibernateEnvers.trainning.model.User;
+import envers.trainning.dao.UserDao;
+import envers.trainning.model.User;
 
 public class App {
 	public static void main(String[] args) {

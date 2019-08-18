@@ -1,4 +1,4 @@
-package HibernateEnvers.trainning.dao;
+package envers.trainning.dao;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

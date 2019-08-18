@@ -1,4 +1,4 @@
-package HibernateEnvers.trainning.model;
+package envers.trainning.model;
 
 import javax.persistence.Entity;
 

@@ -1,8 +1,8 @@
-package HibernateEnvers.trainning.dao;
+package envers.trainning.dao;
 
 import org.hibernate.Session;
 
-import HibernateEnvers.trainning.model.User;
+import envers.trainning.model.User;
 
 public class UserDao {
 	
