@@ -6,24 +6,24 @@
 	<session-factory>
 
 		<!-- DB Connection Details -->
-		<property name="connection.url">jdbc:mysql://localhost:3306/testdb</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/testDB</property>
 		<property name="connection.username">root</property>
-		<property name="connection.password">root</property>
+		<property name="connection.password"></property>
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<property name="connection.autocommit">true</property>
 
 		<!-- Logger Details : to show queries on console-->
 		<property name="show_sql">true</property>
 		<property name="format_sql">true</property>
-
-		<!-- Envers automatically creates audit tables if below property is set to create, create-drop or update -->
+		
 		<property name="hbm2ddl.auto">update</property>
 
-		<property name="connection.pool_size">1</property>
+		<property name="connection.pool_size">2</property>
 		<property name="current_session_context_class">thread</property>
 
 		<!-- Entity mapping -->
-		<mapping class="com.domain.Article" />
+		<mapping class="envers.training.model.User" />
 
 	</session-factory>
 </hibernate-configuration>

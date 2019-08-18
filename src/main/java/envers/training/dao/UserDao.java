@@ -1,11 +1,11 @@
-package envers.trainning.dao;
+package envers.training.dao;
 
 import org.hibernate.Session;
 
-import envers.trainning.model.User;
+import envers.training.model.User;
 
 public class UserDao {
-	
+
 	public void saveOrUpdateUser(User user) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();

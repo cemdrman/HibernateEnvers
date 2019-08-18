@@ -1,11 +1,11 @@
-package envers.trainning;
+package envers.training;
 
-import envers.trainning.dao.UserDao;
-import envers.trainning.model.User;
+import envers.training.dao.UserDao;
+import envers.training.model.User;
 
 public class App {
 	public static void main(String[] args) {
-		User user = new User(1, "cem", "dırman", "cem@bilisim.io", "1231231212");
+		User user = new User("cem", "dirman", "cem@bilisim.io", "1231231212");
 		UserDao dao = new UserDao();
 		dao.saveOrUpdateUser(user);
 		user.setEmail("cem.dirman@bilisim.io");

@@ -1,6 +1,9 @@
-package envers.trainning.model;
+package envers.training.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 import org.hibernate.envers.AuditTable;
 import org.hibernate.envers.Audited;
@@ -8,9 +11,11 @@ import org.hibernate.envers.NotAudited;
 
 @Entity
 @Audited
-@AuditTable(value="User_Audited")
+@AuditTable(value = "User_Audited")
 public class User {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	private String name;
 	private String surname;
@@ -18,9 +23,12 @@ public class User {
 	@NotAudited
 	private String phone;
 
-	public User(Integer id, String name, String surname, String email, String phone) {
+	public User() {
 		super();
-		this.id = id;
+	}
+
+	public User(String name, String surname, String email, String phone) {
+		super();
 		this.name = name;
 		this.surname = surname;
 		this.email = email;
